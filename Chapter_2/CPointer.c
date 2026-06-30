@@ -1,8 +1,11 @@
 #include <stdio.h>
 
+typedef unsigned char *byte_pointer;
+
 int main()
 {
-	int i = 10;
-	printf( "Memory Address : %p\n", &i );
+	int i = 8;
+	byte_pointer first_byte = (byte_pointer) &i;
+	printf( "Memory Address : %b\n", first_byte[0] );
 	return 0;
 }
